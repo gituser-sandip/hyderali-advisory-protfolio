@@ -21,9 +21,9 @@
   <!-- Inner highlight circle for depth -->
   <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" shape-rendering="geometricPrecision"/>
   <!-- Letter 'H' -->
-  <path d="M35 32v56h12V64h16v24h12V32H63V54H47V32z" fill="#ffffff" stroke="none" filter="url(#glowEffect)" shape-rendering="geometricPrecision"/>
+  <path d="M35 32v56h12V64h16v24h12V32H63V54H47V32z" fill="#ffffff" stroke="#003d99" stroke-width="1.5" filter="url(#glowEffect)" shape-rendering="geometricPrecision"/>
   <!-- Letter 'A' with accent -->
-  <path d="M68 32L88 84h-13l-3-9h-14l-3 9H56L72 32z M72 46L68 58h8z" fill="#e0f7ff" stroke="none" filter="url(#glowEffect)" shape-rendering="geometricPrecision"/>
+  <path d="M68 32L88 84h-13l-3-9h-14l-3 9H56L72 32z M72 46L68 58h8z" fill="#e0f7ff" stroke="#003d99" stroke-width="1.5" filter="url(#glowEffect)" shape-rendering="geometricPrecision"/>
   <!-- Accent accent line -->
   <line x1="45" y1="88" x2="75" y2="88" stroke="#ffffff" stroke-width="2" stroke-linecap="round" shape-rendering="geometricPrecision"/>
 </svg>
