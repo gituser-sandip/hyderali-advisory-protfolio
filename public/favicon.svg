@@ -1,11 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img">
   <defs>
-    <linearGradient id="logoGradient" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#0f4fa8" />
-      <stop offset="100%" stop-color="#38bdf8" />
+    <linearGradient id="logoGradient" x1="0.2" x2="0.8" y1="0.1" y2="0.9">
+      <stop offset="0%" stop-color="#0051cc" />
+      <stop offset="50%" stop-color="#0f8bff" />
+      <stop offset="100%" stop-color="#06b6d4" />
     </linearGradient>
+    <filter id="glowEffect">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadowEffect">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <circle cx="60" cy="60" r="56" fill="url(#logoGradient)" stroke="#0b3e8a" stroke-width="4" />
-  <path d="M36 34v52h10V62h18v24h10V34h-10L64 58V34H46z" fill="#ffffff" />
-  <path d="M70 34 92 86H78l-4-10H68l-4 10H54L70 34z" fill="#c7e7ff" />
+  <!-- Background circle with gradient -->
+  <circle cx="60" cy="60" r="56" fill="url(#logoGradient)" stroke="#00357a" stroke-width="2" shape-rendering="geometricPrecision"/>
+  <!-- Inner highlight circle for depth -->
+  <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" shape-rendering="geometricPrecision"/>
+  <!-- Letter 'H' -->
+  <path d="M35 32v56h12V64h16v24h12V32H63V54H47V32z" fill="#ffffff" stroke="none" filter="url(#glowEffect)" shape-rendering="geometricPrecision"/>
+  <!-- Letter 'A' with accent -->
+  <path d="M68 32L88 84h-13l-3-9h-14l-3 9H56L72 32z M72 46L68 58h8z" fill="#e0f7ff" stroke="none" filter="url(#glowEffect)" shape-rendering="geometricPrecision"/>
+  <!-- Accent accent line -->
+  <line x1="45" y1="88" x2="75" y2="88" stroke="#ffffff" stroke-width="2" stroke-linecap="round" shape-rendering="geometricPrecision"/>
 </svg>
