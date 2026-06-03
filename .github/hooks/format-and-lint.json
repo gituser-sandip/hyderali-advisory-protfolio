@@ -1,0 +1,47 @@
+[
+  {
+    "event": "PostToolUse",
+    "condition": "tool == 'edit' && (filePath.endsWith('.tsx') || filePath.endsWith('.ts') || filePath.endsWith('.json'))",
+    "hooks": [
+      {
+        "name": "prettier-format",
+        "type": "command",
+        "command": "npx prettier --write \"$FILE_PATH\"",
+        "description": "Auto-format with Prettier",
+        "timeout": 10000,
+        "continueOnError": true,
+        "platforms": ["windows", "linux", "osx"]
+      }
+    ]
+  },
+  {
+    "event": "PostToolUse",
+    "condition": "tool == 'edit' && (filePath.endsWith('.tsx') || filePath.endsWith('.ts'))",
+    "hooks": [
+      {
+        "name": "eslint-fix",
+        "type": "command",
+        "command": "npx eslint --fix \"$FILE_PATH\"",
+        "description": "Auto-fix ESLint issues",
+        "timeout": 15000,
+        "continueOnError": true,
+        "platforms": ["windows", "linux", "osx"]
+      }
+    ]
+  },
+  {
+    "event": "PreToolUse",
+    "condition": "tool == 'execute' && args.command.includes('git commit')",
+    "hooks": [
+      {
+        "name": "pre-commit-type-check",
+        "type": "command",
+        "command": "npx tsc --noEmit",
+        "description": "TypeScript type checking before commit",
+        "timeout": 30000,
+        "continueOnError": false,
+        "platforms": ["windows", "linux", "osx"]
+      }
+    ]
+  }
+]
