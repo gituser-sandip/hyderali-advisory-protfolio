@@ -19,17 +19,17 @@ export default function Preloader() {
           {/* Animated logo mark */}
           <div className="relative w-16 h-16">
             <motion.div
-              className="absolute inset-0 border-2 border-amber-400 rounded-full"
+              className="absolute inset-0 border-2 border-sky-400 rounded-full"
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
             />
             <motion.div
-              className="absolute inset-2 border border-amber-600/50 rounded-full"
+              className="absolute inset-2 border border-sky-600/50 rounded-full"
               animate={{ rotate: -360 }}
               transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-amber-400 font-playfair font-bold text-xl">HA</span>
+              <span className="text-sky-400 font-playfair font-bold text-xl">HA</span>
             </div>
           </div>
         </motion.div>
@@ -43,7 +43,7 @@ export default function Preloader() {
           HYDER ALI ADVISORY
         </motion.h1>
         <motion.p
-          className="text-amber-400/70 text-xs tracking-[0.3em] mt-2 uppercase"
+          className="text-sky-400/70 text-xs tracking-[0.3em] mt-2 uppercase"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
@@ -59,7 +59,7 @@ export default function Preloader() {
           transition={{ delay: 0.9 }}
         >
           <motion.div
-            className="h-full bg-gradient-to-r from-amber-600 to-amber-400"
+            className="h-full bg-gradient-to-r from-sky-600 to-sky-400"
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
             transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}

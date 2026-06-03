@@ -51,7 +51,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <a
               href="tel:+97143000000"
-              className="flex items-center gap-2 hover:text-amber-400 transition-colors"
+              className="flex items-center gap-2 hover:text-sky-400 transition-colors"
               aria-label="Call us"
             >
               <Phone size={12} />
@@ -59,14 +59,14 @@ export default function Navbar() {
             </a>
             <a
               href="mailto:info@hyderadvisory.com"
-              className="flex items-center gap-2 hover:text-amber-400 transition-colors"
+              className="flex items-center gap-2 hover:text-sky-400 transition-colors"
               aria-label="Email us"
             >
               <Mail size={12} />
               <span>info@hyderadvisory.com</span>
             </a>
           </div>
-          <div className="flex items-center gap-2 text-amber-400/70">
+          <div className="flex items-center gap-2 text-sky-400/70">
             <Shield size={12} />
             <span>ISO 9001:2015 Certified | Licensed by Dubai Legal Affairs</span>
           </div>
@@ -93,15 +93,14 @@ export default function Navbar() {
               className="flex items-center gap-3 group"
               aria-label="Hyder Ali Advisory - Home"
             >
-              <div className="relative w-12 h-12 flex items-center justify-center border border-amber-500/50 rounded-full group-hover:border-amber-400 transition-all duration-300">
-                <span className="text-amber-400 font-playfair font-bold text-lg">HA</span>
-                <div className="absolute inset-0 rounded-full bg-amber-400/5 group-hover:bg-amber-400/10 transition-all" />
+              <div className="relative w-12 h-12 flex items-center justify-center border border-sky-500/50 rounded-full overflow-hidden group-hover:border-sky-400 transition-all duration-300">
+                <img src="/favicon.svg" alt="Hyder Ali Advisory logo" className="w-9 h-9 object-contain" />
               </div>
               <div className="hidden sm:block">
                 <p className="text-white font-playfair font-semibold text-base leading-tight tracking-wide">
                   Hyder Ali Advisory
                 </p>
-                <p className="text-amber-400/70 text-[10px] tracking-[0.2em] uppercase font-inter">
+                <p className="text-sky-400/70 text-[10px] tracking-[0.2em] uppercase font-inter">
                   Corporate Services
                 </p>
               </div>
@@ -116,14 +115,14 @@ export default function Navbar() {
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                   className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${
                     activeSection === link.href.replace('#', '')
-                      ? 'text-amber-400'
+                      ? 'text-sky-400'
                       : 'text-zinc-300 hover:text-white'
                   }`}
                 >
                   {link.label}
                   {activeSection === link.href.replace('#', '') && (
                     <motion.div
-                      className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-px bg-amber-400"
+                      className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-px bg-sky-400"
                       layoutId="navUnderline"
                     />
                   )}
@@ -136,7 +135,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-                className="group relative px-6 py-2.5 text-sm font-semibold tracking-wide text-[#0a0a0f] bg-amber-400 hover:bg-amber-300 transition-all duration-300 overflow-hidden"
+                className="group relative px-6 py-2.5 text-sm font-semibold tracking-wide text-[#0a0a0f] bg-sky-400 hover:bg-sky-300 transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10">Free Consultation</span>
               </a>
@@ -172,7 +171,7 @@ export default function Navbar() {
                     onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                     className={`block py-3 px-4 text-base font-medium border-l-2 transition-all duration-200 ${
                       activeSection === link.href.replace('#', '')
-                        ? 'text-amber-400 border-amber-400 bg-amber-400/5'
+                        ? 'text-sky-400 border-sky-400 bg-sky-400/5'
                         : 'text-zinc-300 border-transparent hover:text-white hover:border-zinc-600'
                     }`}
                     initial={{ opacity: 0, x: -20 }}
@@ -186,7 +185,7 @@ export default function Navbar() {
                   <a
                     href="#contact"
                     onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-                    className="block w-full text-center py-3 bg-amber-400 text-[#0a0a0f] font-semibold tracking-wide hover:bg-amber-300 transition-colors"
+                    className="block w-full text-center py-3 bg-sky-400 text-[#0a0a0f] font-semibold tracking-wide hover:bg-sky-300 transition-colors"
                   >
                     Free Consultation
                   </a>

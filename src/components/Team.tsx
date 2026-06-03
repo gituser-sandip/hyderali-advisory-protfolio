@@ -10,7 +10,7 @@ const team = [
     experience: '20+ Years',
     education: 'Managing Director & Founder',
     initials: 'HA',
-    gradient: 'from-amber-800 to-amber-600',
+    gradient: 'from-sky-800 to-sky-600',
     image: 'https://hyderadvisory.com/assets/images/team/HYDER ALI - MANAGING DIRECTOR - NO 1.jpg',
   },
   {
@@ -90,7 +90,7 @@ export default function Team() {
 
   return (
     <section id="team" className="py-28 bg-[#0a0a0f] relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-400/30 to-transparent" />
 
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -101,11 +101,11 @@ export default function Team() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-px bg-amber-400" />
-            <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-inter">
+            <div className="w-10 h-px bg-sky-400" />
+            <span className="text-sky-400 text-xs tracking-[0.3em] uppercase font-inter">
               Our Leadership
             </span>
-            <div className="w-10 h-px bg-amber-400" />
+            <div className="w-10 h-px bg-sky-400" />
           </div>
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white mb-4">
             Meet the Legal Minds
@@ -121,7 +121,7 @@ export default function Team() {
           {team.map(({ name, role, specialties, experience, education, initials, gradient, image }, i) => (
             <motion.div
               key={name}
-              className="group relative bg-[#0d0d14] border border-zinc-800/50 overflow-hidden hover:border-amber-400/30 transition-all duration-500"
+              className="group relative bg-[#0d0d14] border border-zinc-800/50 overflow-hidden hover:border-sky-400/30 transition-all duration-500"
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.08 }}
@@ -144,7 +144,7 @@ export default function Team() {
                   </div>
                 </div>
                 {/* Experience badge */}
-                <div className="absolute top-4 right-4 bg-amber-400 px-2 py-1 z-10">
+                <div className="absolute top-4 right-4 bg-sky-400 px-2 py-1 z-10">
                   <span className="text-[#0a0a0f] text-xs font-bold">{experience}</span>
                 </div>
                 {/* Bottom gradient fade */}
@@ -154,7 +154,7 @@ export default function Team() {
               {/* Content */}
               <div className="p-6">
                 <h3 className="font-playfair text-lg font-semibold text-white mb-1">{name}</h3>
-                <p className="text-amber-400/80 text-xs tracking-wide mb-3 leading-tight">{role}</p>
+                <p className="text-sky-400/80 text-xs tracking-wide mb-3 leading-tight">{role}</p>
 
                 <div className="flex items-start gap-2 mb-4">
                   <Award size={12} className="text-zinc-600 mt-0.5 flex-shrink-0" />
@@ -178,7 +178,7 @@ export default function Team() {
                   <a
                     href="#contact"
                     onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-                    className="flex items-center gap-1.5 text-zinc-500 hover:text-amber-400 transition-colors text-xs"
+                    className="flex items-center gap-1.5 text-zinc-500 hover:text-sky-400 transition-colors text-xs"
                     aria-label={`Email ${name}`}
                   >
                     <Mail size={13} />
@@ -198,7 +198,7 @@ export default function Team() {
               </div>
 
               {/* Hover accent */}
-              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-amber-600 to-amber-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-sky-600 to-sky-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
             </motion.div>
           ))}
         </div>
@@ -210,7 +210,7 @@ export default function Team() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.7 }}
         >
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-400/30 to-transparent" />
           <h3 className="font-playfair text-2xl font-semibold text-white mb-3">
             Join Our Team
           </h3>
@@ -221,7 +221,7 @@ export default function Team() {
           <a
             href="#contact"
             onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="inline-flex items-center gap-2 px-7 py-3 border border-amber-400/50 text-amber-400 text-sm font-semibold hover:bg-amber-400/5 transition-colors"
+            className="inline-flex items-center gap-2 px-7 py-3 border border-sky-400/50 text-sky-400 text-sm font-semibold hover:bg-sky-400/5 transition-colors"
           >
             Apply Now →
           </a>

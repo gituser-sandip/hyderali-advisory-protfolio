@@ -16,12 +16,22 @@ export default function Hero() {
   const parallaxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      if (parallaxRef.current) {
-        const y = window.scrollY * 0.4;
-        parallaxRef.current.style.transform = `translateY(${y}px)`;
-      }
+      if (!parallaxRef.current || ticking) return;
+
+      ticking = true;
+      const y = window.scrollY * 0.4;
+
+      window.requestAnimationFrame(() => {
+        if (parallaxRef.current) {
+          parallaxRef.current.style.transform = `translate3d(0, ${y}px, 0)`;
+        }
+        ticking = false;
+      });
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -53,7 +63,7 @@ export default function Hero() {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-px h-20 bg-gradient-to-b from-amber-400/0 via-amber-400/60 to-amber-400/0"
+            className="absolute w-px h-20 bg-gradient-to-b from-sky-400/0 via-sky-400/60 to-sky-400/0"
             style={{
               left: `${10 + i * 16}%`,
               top: `${20 + (i % 3) * 20}%`,
@@ -72,8 +82,8 @@ export default function Hero() {
       </div>
 
       {/* Decorative corner elements */}
-      <div className="absolute top-32 right-12 w-40 h-40 border border-amber-400/10 rotate-45 hidden xl:block" />
-      <div className="absolute top-40 right-20 w-24 h-24 border border-amber-400/5 rotate-45 hidden xl:block" />
+      <div className="absolute top-32 right-12 w-40 h-40 border border-sky-400/10 rotate-45 hidden xl:block" />
+      <div className="absolute top-40 right-20 w-24 h-24 border border-sky-400/5 rotate-45 hidden xl:block" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -85,8 +95,8 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="w-12 h-px bg-amber-400" />
-            <span className="text-amber-400 text-xs tracking-[0.4em] uppercase font-inter font-medium">
+            <div className="w-12 h-px bg-sky-400" />
+            <span className="text-sky-400 text-xs tracking-[0.4em] uppercase font-inter font-medium">
               Premier Legal & Corporate Advisory
             </span>
           </motion.div>
@@ -99,7 +109,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             Justice.{' '}
-            <span className="text-amber-400 italic">Integrity.</span>
+            <span className="text-sky-400 italic">Integrity.</span>
             <br />
             <span className="text-zinc-300">Excellence.</span>
           </motion.h1>
@@ -129,7 +139,7 @@ export default function Hero() {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="group px-8 py-4 bg-amber-400 text-[#0a0a0f] font-semibold text-sm tracking-widest uppercase hover:bg-amber-300 transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-4 bg-sky-400 text-[#0a0a0f] font-semibold text-sm tracking-widest uppercase hover:bg-sky-300 transition-all duration-300 flex items-center gap-2"
             >
               Free Consultation
               <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -140,7 +150,7 @@ export default function Hero() {
                 e.preventDefault();
                 document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-8 py-4 border border-zinc-500 text-zinc-300 font-semibold text-sm tracking-widest uppercase hover:border-amber-400 hover:text-amber-400 transition-all duration-300"
+              className="px-8 py-4 border border-zinc-500 text-zinc-300 font-semibold text-sm tracking-widest uppercase hover:border-sky-400 hover:text-sky-400 transition-all duration-300"
             >
               Our Services
             </a>
@@ -161,8 +171,8 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 + i * 0.1 }}
               >
-                <div className="w-10 h-10 border border-amber-400/30 flex items-center justify-center">
-                  <Icon size={18} className="text-amber-400" />
+                <div className="w-10 h-10 border border-sky-400/30 flex items-center justify-center">
+                  <Icon size={18} className="text-sky-400" />
                 </div>
                 <div>
                   <p className="text-white font-bold text-base leading-none">{label}</p>
@@ -180,7 +190,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.button
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 hover:text-amber-400 transition-colors group"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-500 hover:text-sky-400 transition-colors group"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}

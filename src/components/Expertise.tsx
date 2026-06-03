@@ -36,7 +36,7 @@ export default function Expertise() {
       </div>
 
       {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-400/40 to-transparent" />
 
       <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -47,14 +47,14 @@ export default function Expertise() {
             transition={{ duration: 0.7 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-px bg-amber-400" />
-              <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-inter">
+              <div className="w-10 h-px bg-sky-400" />
+              <span className="text-sky-400 text-xs tracking-[0.3em] uppercase font-inter">
                 Areas of Expertise
               </span>
             </div>
             <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
               Unmatched Legal{' '}
-              <span className="text-amber-400 italic">Proficiency</span>
+              <span className="text-sky-400 italic">Proficiency</span>
             </h2>
             <p className="text-zinc-400 font-cormorant text-lg mb-10 leading-relaxed">
               Our attorneys bring decades of combined experience across every facet of UAE law,
@@ -67,11 +67,11 @@ export default function Expertise() {
                 <div key={name}>
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-zinc-300 text-sm font-medium">{name}</span>
-                    <span className="text-amber-400 text-sm font-bold">{level}%</span>
+                    <span className="text-sky-400 text-sm font-bold">{level}%</span>
                   </div>
                   <div className="h-1 bg-zinc-800 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-amber-600 to-amber-400 rounded-full"
+                      className="h-full bg-gradient-to-r from-sky-600 to-sky-400 rounded-full"
                       initial={{ width: 0 }}
                       animate={inView ? { width: `${level}%` } : { width: 0 }}
                       transition={{ duration: 1.2, delay: 0.3 + i * 0.1, ease: 'easeOut' }}
@@ -97,12 +97,12 @@ export default function Expertise() {
               {certifications.map(({ label, abbr }, i) => (
                 <motion.div
                   key={abbr}
-                  className="border border-zinc-800 p-5 text-center hover:border-amber-400/40 transition-colors group"
+                  className="border border-zinc-800 p-5 text-center hover:border-sky-400/40 transition-colors group"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={inView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.3 + i * 0.08 }}
                 >
-                  <p className="text-amber-400 font-playfair font-bold text-xl mb-1">{abbr}</p>
+                  <p className="text-sky-400 font-playfair font-bold text-xl mb-1">{abbr}</p>
                   <p className="text-zinc-500 text-xs leading-tight">{label}</p>
                 </motion.div>
               ))}
@@ -128,11 +128,11 @@ export default function Expertise() {
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.5 + i * 0.1 }}
                 >
-                  <div className="absolute left-0 top-1 w-6 h-6 border-2 border-amber-400 bg-[#0a0a0f] flex items-center justify-center rounded-full">
-                    <div className="w-2 h-2 bg-amber-400 rounded-full" />
+                  <div className="absolute left-0 top-1 w-6 h-6 border-2 border-sky-400 bg-[#0a0a0f] flex items-center justify-center rounded-full">
+                    <div className="w-2 h-2 bg-sky-400 rounded-full" />
                   </div>
                   <div>
-                    <span className="text-amber-400 font-bold text-sm">{year}</span>
+                    <span className="text-sky-400 font-bold text-sm">{year}</span>
                     <p className="text-zinc-300 text-sm mt-0.5">{event}</p>
                   </div>
                 </motion.div>

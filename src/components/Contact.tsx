@@ -154,7 +154,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-28 bg-[#0d0d14] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-400/30 to-transparent" />
 
       {/* Background city skyline */}
       <div className="absolute inset-0 opacity-10">
@@ -177,11 +177,11 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-px bg-amber-400" />
-            <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-inter">
+            <div className="w-10 h-px bg-sky-400" />
+            <span className="text-sky-400 text-xs tracking-[0.3em] uppercase font-inter">
               Get In Touch
             </span>
-            <div className="w-10 h-px bg-amber-400" />
+            <div className="w-10 h-px bg-sky-400" />
           </div>
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white mb-4">
             Schedule Your Consultation
@@ -207,8 +207,8 @@ export default function Contact() {
               <div className="space-y-5">
                 {contactInfo.map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-4 group">
-                    <div className="w-10 h-10 border border-zinc-700 flex items-center justify-center flex-shrink-0 group-hover:border-amber-400/50 transition-colors">
-                      <Icon size={16} className="text-amber-400" />
+                    <div className="w-10 h-10 border border-zinc-700 flex items-center justify-center flex-shrink-0 group-hover:border-sky-400/50 transition-colors">
+                      <Icon size={16} className="text-sky-400" />
                     </div>
                     <div>
                       <p className="text-zinc-500 text-xs uppercase tracking-wider mb-0.5">
@@ -217,7 +217,7 @@ export default function Contact() {
                       {href ? (
                         <a
                           href={href}
-                          className="text-zinc-200 text-sm hover:text-amber-400 transition-colors leading-relaxed"
+                          className="text-zinc-200 text-sm hover:text-sky-400 transition-colors leading-relaxed"
                           {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                         >
                           {value}
@@ -234,7 +234,7 @@ export default function Contact() {
             {/* Map placeholder */}
             <div className="relative h-48 border border-zinc-800 overflow-hidden bg-zinc-900">
               <div className="absolute inset-0 flex items-center justify-center flex-col gap-3">
-                <MapPin size={32} className="text-amber-400" />
+                <MapPin size={32} className="text-sky-400" />
                 <p className="text-zinc-400 text-sm text-center px-4">
                   Boulevard Plaza Tower<br />Downtown Dubai, UAE
                 </p>
@@ -242,7 +242,7 @@ export default function Contact() {
                   href="https://maps.google.com/?q=Boulevard+Plaza+Tower+Dubai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-400 text-xs hover:underline"
+                  className="text-sky-400 text-xs hover:underline"
                 >
                   View on Google Maps →
                 </a>
@@ -252,7 +252,7 @@ export default function Contact() {
             {/* Confidentiality notice */}
             <div className="p-4 border border-zinc-800 bg-zinc-900/50">
               <p className="text-zinc-500 text-xs leading-relaxed">
-                <span className="text-amber-400 font-semibold">🔒 Confidential:</span> All
+                <span className="text-sky-400 font-semibold">🔒 Confidential:</span> All
                 communications are protected by attorney-client privilege. Your information is
                 encrypted and never shared with third parties. We comply with UAE PDPA and GDPR.
               </p>
@@ -282,7 +282,7 @@ export default function Contact() {
                 </p>
                 <button
                   onClick={() => setSubmitStatus('idle')}
-                  className="mt-6 px-6 py-2.5 border border-amber-400/50 text-amber-400 text-sm hover:bg-amber-400/5 transition-colors"
+                  className="mt-6 px-6 py-2.5 border border-sky-400/50 text-sky-400 text-sm hover:bg-sky-400/5 transition-colors"
                 >
                   Send Another Message
                 </button>
@@ -316,7 +316,7 @@ export default function Contact() {
                   {/* Name */}
                   <div>
                     <label htmlFor="contact-name" className="block text-zinc-400 text-xs mb-2 uppercase tracking-wider">
-                      Full Name <span className="text-amber-400">*</span>
+                      Full Name <span className="text-sky-400">*</span>
                     </label>
                     <input
                       id="contact-name"
@@ -327,7 +327,7 @@ export default function Contact() {
                       placeholder="Your full name"
                       autoComplete="name"
                       maxLength={100}
-                      className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-amber-400 transition-colors ${
+                      className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-sky-400 transition-colors ${
                         errors.name ? 'border-red-500' : 'border-zinc-700'
                       }`}
                       aria-required="true"
@@ -344,7 +344,7 @@ export default function Contact() {
                   {/* Email */}
                   <div>
                     <label htmlFor="contact-email" className="block text-zinc-400 text-xs mb-2 uppercase tracking-wider">
-                      Email Address <span className="text-amber-400">*</span>
+                      Email Address <span className="text-sky-400">*</span>
                     </label>
                     <input
                       id="contact-email"
@@ -355,7 +355,7 @@ export default function Contact() {
                       placeholder="your@email.com"
                       autoComplete="email"
                       maxLength={254}
-                      className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-amber-400 transition-colors ${
+                      className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-sky-400 transition-colors ${
                         errors.email ? 'border-red-500' : 'border-zinc-700'
                       }`}
                       aria-required="true"
@@ -385,7 +385,7 @@ export default function Contact() {
                       placeholder="+971 5X XXX XXXX"
                       autoComplete="tel"
                       maxLength={20}
-                      className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-amber-400 transition-colors ${
+                      className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-sky-400 transition-colors ${
                         errors.phone ? 'border-red-500' : 'border-zinc-700'
                       }`}
                       aria-describedby={errors.phone ? 'phone-error' : undefined}
@@ -401,14 +401,14 @@ export default function Contact() {
                   {/* Service */}
                   <div>
                     <label htmlFor="contact-service" className="block text-zinc-400 text-xs mb-2 uppercase tracking-wider">
-                      Service Area <span className="text-amber-400">*</span>
+                      Service Area <span className="text-sky-400">*</span>
                     </label>
                     <select
                       id="contact-service"
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className={`w-full bg-zinc-900 border text-white px-4 py-3 text-sm focus:outline-none focus:border-amber-400 transition-colors appearance-none cursor-pointer ${
+                      className={`w-full bg-zinc-900 border text-white px-4 py-3 text-sm focus:outline-none focus:border-sky-400 transition-colors appearance-none cursor-pointer ${
                         errors.service ? 'border-red-500' : 'border-zinc-700'
                       } ${!formData.service ? 'text-zinc-600' : 'text-white'}`}
                       aria-required="true"
@@ -431,7 +431,7 @@ export default function Contact() {
                 {/* Message */}
                 <div>
                   <label htmlFor="contact-message" className="block text-zinc-400 text-xs mb-2 uppercase tracking-wider">
-                    Your Legal Matter <span className="text-amber-400">*</span>
+                    Your Legal Matter <span className="text-sky-400">*</span>
                   </label>
                   <textarea
                     id="contact-message"
@@ -441,7 +441,7 @@ export default function Contact() {
                     rows={5}
                     placeholder="Briefly describe your legal matter or question..."
                     maxLength={2000}
-                    className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-amber-400 transition-colors resize-none ${
+                    className={`w-full bg-zinc-900 border text-white placeholder-zinc-600 px-4 py-3 text-sm focus:outline-none focus:border-sky-400 transition-colors resize-none ${
                       errors.message ? 'border-red-500' : 'border-zinc-700'
                     }`}
                     aria-required="true"
@@ -477,7 +477,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full py-4 bg-amber-400 text-[#0a0a0f] font-bold text-sm tracking-widest uppercase hover:bg-amber-300 disabled:opacity-70 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3"
+                  className="w-full py-4 bg-sky-400 text-[#0a0a0f] font-bold text-sm tracking-widest uppercase hover:bg-sky-300 disabled:opacity-70 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3"
                   aria-label={submitting ? 'Sending your message...' : 'Send consultation request'}
                 >
                   {submitting ? (

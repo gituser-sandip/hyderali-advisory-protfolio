@@ -18,10 +18,10 @@ export default function About() {
     <section id="about" ref={ref} className="py-28 bg-[#0d0d14] relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full opacity-5">
-        <div className="w-full h-full bg-gradient-to-l from-amber-400 to-transparent" />
+        <div className="w-full h-full bg-gradient-to-l from-sky-400 to-transparent" />
       </div>
-      <div className="absolute bottom-20 left-10 w-64 h-64 border border-amber-400/5 rounded-full" />
-      <div className="absolute bottom-10 left-20 w-32 h-32 border border-amber-400/8 rounded-full" />
+      <div className="absolute bottom-20 left-10 w-64 h-64 border border-sky-400/5 rounded-full" />
+      <div className="absolute bottom-10 left-20 w-32 h-32 border border-sky-400/8 rounded-full" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -41,9 +41,9 @@ export default function About() {
                 loading="lazy"
               />
               {/* Gold frame accent */}
-              <div className="absolute -bottom-4 -right-4 w-full max-w-md h-[550px] border border-amber-400/30 -z-10" />
-              <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-400" />
-              <div className="absolute -bottom-4 -right-0 w-24 h-24 border-b-2 border-r-2 border-amber-400" />
+              <div className="absolute -bottom-4 -right-4 w-full max-w-md h-[550px] border border-sky-400/30 -z-10" />
+              <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-sky-400" />
+              <div className="absolute -bottom-4 -right-0 w-24 h-24 border-b-2 border-r-2 border-sky-400" />
             </div>
 
             {/* Floating card */}
@@ -55,7 +55,7 @@ export default function About() {
             >
               <div className="flex gap-1 mb-2">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={12} className="text-amber-400 fill-amber-400" />
+                  <Star key={i} size={12} className="text-sky-400 fill-sky-400" />
                 ))}
               </div>
               <p className="text-white text-sm font-semibold leading-tight">
@@ -66,7 +66,7 @@ export default function About() {
 
             {/* Badge */}
             <motion.div
-              className="absolute -left-6 lg:-left-10 top-16 bg-amber-400 p-5 text-center"
+              className="absolute -left-6 lg:-left-10 top-16 bg-sky-400 p-5 text-center"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -85,15 +85,15 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-px bg-amber-400" />
-              <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-inter">
+              <div className="w-10 h-px bg-sky-400" />
+              <span className="text-sky-400 text-xs tracking-[0.3em] uppercase font-inter">
                 About Our Firm
               </span>
             </div>
 
             <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Dubai's Most Trusted{' '}
-              <span className="text-amber-400 italic">Legal Advisory</span>{' '}
+              <span className="text-sky-400 italic">Legal Advisory</span>{' '}
               Partner
             </h2>
 
@@ -124,7 +124,7 @@ export default function About() {
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.4 + i * 0.08 }}
                 >
-                  <CheckCircle2 size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 size={16} className="text-sky-400 mt-0.5 flex-shrink-0" />
                   <span className="text-zinc-300 text-sm">{item}</span>
                 </motion.div>
               ))}
@@ -138,7 +138,7 @@ export default function About() {
                   e.preventDefault();
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-7 py-3 bg-amber-400 text-[#0a0a0f] font-semibold text-sm tracking-wide hover:bg-amber-300 transition-colors"
+                className="px-7 py-3 bg-sky-400 text-[#0a0a0f] font-semibold text-sm tracking-wide hover:bg-sky-300 transition-colors"
               >
                 Work With Us
               </a>
@@ -148,7 +148,7 @@ export default function About() {
                   e.preventDefault();
                   document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-7 py-3 border border-zinc-700 text-zinc-300 font-semibold text-sm tracking-wide hover:border-amber-400 hover:text-amber-400 transition-colors"
+                className="px-7 py-3 border border-zinc-700 text-zinc-300 font-semibold text-sm tracking-wide hover:border-sky-400 hover:text-sky-400 transition-colors"
               >
                 Our Services
               </a>

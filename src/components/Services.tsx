@@ -69,7 +69,7 @@ export default function Services() {
   return (
     <section id="services" className="py-28 bg-[#0a0a0f] relative overflow-hidden">
       {/* Top border accent */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-400/50 to-transparent" />
 
       {/* Background watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
@@ -90,11 +90,11 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-px bg-amber-400" />
-            <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-inter">
+            <div className="w-10 h-px bg-sky-400" />
+            <span className="text-sky-400 text-xs tracking-[0.3em] uppercase font-inter">
               Practice Areas
             </span>
-            <div className="w-10 h-px bg-amber-400" />
+            <div className="w-10 h-px bg-sky-400" />
           </div>
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white mb-4">
             Comprehensive Legal Services
@@ -116,15 +116,15 @@ export default function Services() {
               transition={{ duration: 0.5, delay: i * 0.07 }}
             >
               {/* Hover accent line */}
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-amber-400/0 via-amber-400 to-amber-400/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-sky-400/0 via-sky-400 to-sky-400/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
 
               {/* Icon */}
-              <div className="w-12 h-12 border border-zinc-700 group-hover:border-amber-400/50 flex items-center justify-center mb-6 transition-colors duration-300">
-                <Icon size={22} className="text-zinc-400 group-hover:text-amber-400 transition-colors duration-300" />
+              <div className="w-12 h-12 border border-zinc-700 group-hover:border-sky-400/50 flex items-center justify-center mb-6 transition-colors duration-300">
+                <Icon size={22} className="text-zinc-400 group-hover:text-sky-400 transition-colors duration-300" />
               </div>
 
               {/* Content */}
-              <h3 className="font-playfair text-lg font-semibold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+              <h3 className="font-playfair text-lg font-semibold text-white mb-3 group-hover:text-sky-400 transition-colors duration-300">
                 {title}
               </h3>
               <p className="text-zinc-500 text-sm leading-relaxed mb-4 font-inter">{desc}</p>
@@ -142,13 +142,13 @@ export default function Services() {
               </div>
 
               {/* Learn more link */}
-              <div className="flex items-center gap-2 text-amber-400/50 group-hover:text-amber-400 text-xs tracking-wide uppercase font-medium transition-colors duration-300">
+              <div className="flex items-center gap-2 text-sky-400/50 group-hover:text-sky-400 text-xs tracking-wide uppercase font-medium transition-colors duration-300">
                 <span>Learn More</span>
                 <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
               </div>
 
               {/* Bottom corner decoration */}
-              <div className="absolute bottom-0 right-0 w-16 h-16 border-t border-l border-zinc-800/50 group-hover:border-amber-400/10 transition-colors duration-300" />
+              <div className="absolute bottom-0 right-0 w-16 h-16 border-t border-l border-zinc-800/50 group-hover:border-sky-400/10 transition-colors duration-300" />
             </motion.div>
           ))}
         </div>
@@ -169,7 +169,7 @@ export default function Services() {
               e.preventDefault();
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 text-amber-400 border border-amber-400/30 px-6 py-2.5 text-sm hover:bg-amber-400/5 transition-colors"
+            className="inline-flex items-center gap-2 text-sky-400 border border-sky-400/30 px-6 py-2.5 text-sm hover:bg-sky-400/5 transition-colors"
           >
             Discuss Your Case <ArrowRight size={14} />
           </a>

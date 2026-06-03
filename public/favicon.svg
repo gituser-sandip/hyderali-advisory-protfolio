@@ -1,5 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" fill="#0a0a0f"/>
-  <circle cx="32" cy="32" r="28" stroke="#fbbf24" stroke-width="1.5" fill="none" opacity="0.6"/>
-  <text x="32" y="40" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="20" fill="#fbbf24">HA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img">
+  <defs>
+    <linearGradient id="logoGradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f4fa8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#logoGradient)" stroke="#0b3e8a" stroke-width="4" />
+  <path d="M36 34v52h10V62h18v24h10V34h-10L64 58V34H46z" fill="#ffffff" />
+  <path d="M70 34 92 86H78l-4-10H68l-4 10H54L70 34z" fill="#c7e7ff" />
 </svg>

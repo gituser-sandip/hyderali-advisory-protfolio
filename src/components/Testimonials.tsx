@@ -8,7 +8,7 @@ const testimonials = [
     name: 'Mohammed Al Rashidi',
     role: 'CEO, Gulf Real Estate Group',
     initials: 'MR',
-    color: 'from-amber-600 to-amber-400',
+    color: 'from-sky-600 to-sky-400',
     text: 'Hyder Ali Advisory has been our trusted legal partner for over seven years. Their expertise in real estate law and their ability to navigate complex regulatory environments in Dubai has been absolutely invaluable to our business operations.',
     rating: 5,
   },
@@ -68,7 +68,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-28 bg-[#0d0d14] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-400/30 to-transparent" />
 
       {/* Large quote decoration */}
       <div
@@ -86,11 +86,11 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-px bg-amber-400" />
-            <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-inter">
+            <div className="w-10 h-px bg-sky-400" />
+            <span className="text-sky-400 text-xs tracking-[0.3em] uppercase font-inter">
               Client Stories
             </span>
-            <div className="w-10 h-px bg-amber-400" />
+            <div className="w-10 h-px bg-sky-400" />
           </div>
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white">
             What Our Clients Say
@@ -117,7 +117,7 @@ export default function Testimonials() {
                 {/* Quote icon */}
                 <Quote
                   size={36}
-                  className="text-amber-400/30 mx-auto mb-6"
+                  className="text-sky-400/30 mx-auto mb-6"
                   aria-hidden="true"
                 />
 
@@ -144,7 +144,7 @@ export default function Testimonials() {
                 {/* Stars */}
                 <div className="flex justify-center gap-1 mt-4">
                   {[...Array(testimonials[current].rating)].map((_, i) => (
-                    <span key={i} className="text-amber-400 text-sm">★</span>
+                    <span key={i} className="text-sky-400 text-sm">★</span>
                   ))}
                 </div>
               </motion.div>
@@ -155,7 +155,7 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-6 mt-10">
             <button
               onClick={prev}
-              className="w-10 h-10 border border-zinc-700 flex items-center justify-center text-zinc-400 hover:border-amber-400 hover:text-amber-400 transition-colors"
+              className="w-10 h-10 border border-zinc-700 flex items-center justify-center text-zinc-400 hover:border-sky-400 hover:text-sky-400 transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={18} />
@@ -170,7 +170,7 @@ export default function Testimonials() {
                     setCurrent(i);
                   }}
                   className={`transition-all duration-300 ${
-                    i === current ? 'w-8 h-1.5 bg-amber-400' : 'w-1.5 h-1.5 bg-zinc-700 hover:bg-zinc-500'
+                    i === current ? 'w-8 h-1.5 bg-sky-400' : 'w-1.5 h-1.5 bg-zinc-700 hover:bg-zinc-500'
                   } rounded-full`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
@@ -179,7 +179,7 @@ export default function Testimonials() {
 
             <button
               onClick={next}
-              className="w-10 h-10 border border-zinc-700 flex items-center justify-center text-zinc-400 hover:border-amber-400 hover:text-amber-400 transition-colors"
+              className="w-10 h-10 border border-zinc-700 flex items-center justify-center text-zinc-400 hover:border-sky-400 hover:text-sky-400 transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight size={18} />

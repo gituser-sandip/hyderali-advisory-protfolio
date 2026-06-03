@@ -13,7 +13,7 @@ export default function Stats() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative py-20 bg-amber-400 overflow-hidden">
+    <section ref={ref} className="relative py-20 bg-sky-400 overflow-hidden">
       {/* Diagonal background pattern */}
       <div
         className="absolute inset-0 opacity-5"

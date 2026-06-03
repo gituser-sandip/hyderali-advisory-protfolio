@@ -27,10 +27,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#080810] text-zinc-400 relative overflow-hidden">
       {/* Top accent */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-400/40 to-transparent" />
 
       {/* CTA Band */}
-      <div className="bg-amber-400 py-16 relative overflow-hidden">
+      <div className="bg-sky-400 py-16 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -48,7 +48,7 @@ export default function Footer() {
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); scrollTo('#contact'); }}
-              className="px-8 py-3.5 bg-[#0a0a0f] text-amber-400 font-bold text-sm tracking-widest uppercase hover:bg-zinc-900 transition-colors"
+              className="px-8 py-3.5 bg-[#0a0a0f] text-sky-400 font-bold text-sm tracking-widest uppercase hover:bg-zinc-900 transition-colors"
             >
               Book Free Consultation
             </a>
@@ -69,14 +69,14 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 border border-amber-500/50 flex items-center justify-center">
-                <span className="text-amber-400 font-playfair font-bold text-lg">HA</span>
+              <div className="w-12 h-12 border border-sky-500/50 flex items-center justify-center rounded-full overflow-hidden">
+                <img src="/favicon.svg" alt="Hyder Ali Advisory logo" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <p className="text-white font-playfair font-semibold text-sm leading-tight">
                   Hyder Ali Advisory
                 </p>
-                <p className="text-amber-400/60 text-[10px] tracking-[0.2em] uppercase mt-0.5">
+                <p className="text-sky-400/60 text-[10px] tracking-[0.2em] uppercase mt-0.5">
                   Corporate Services
                 </p>
               </div>
@@ -88,14 +88,14 @@ export default function Footer() {
             <div className="space-y-2">
               <a
                 href="tel:+97143000000"
-                className="flex items-center gap-2 text-zinc-500 hover:text-amber-400 transition-colors text-sm"
+                className="flex items-center gap-2 text-zinc-500 hover:text-sky-400 transition-colors text-sm"
               >
                 <Phone size={13} />
                 +971 4 300 0000
               </a>
               <a
                 href="mailto:info@hyderadvisory.com"
-                className="flex items-center gap-2 text-zinc-500 hover:text-amber-400 transition-colors text-sm"
+                className="flex items-center gap-2 text-zinc-500 hover:text-sky-400 transition-colors text-sm"
               >
                 <Mail size={13} />
                 info@hyderadvisory.com
@@ -118,9 +118,9 @@ export default function Footer() {
                   <a
                     href={href}
                     onClick={(e) => { e.preventDefault(); scrollTo(href); }}
-                    className="text-zinc-500 hover:text-amber-400 transition-colors text-sm flex items-center gap-2 group"
+                    className="text-zinc-500 hover:text-sky-400 transition-colors text-sm flex items-center gap-2 group"
                   >
-                    <span className="w-4 h-px bg-zinc-700 group-hover:bg-amber-400 transition-colors" />
+                    <span className="w-4 h-px bg-zinc-700 group-hover:bg-sky-400 transition-colors" />
                     {label}
                   </a>
                 </li>
@@ -139,9 +139,9 @@ export default function Footer() {
                   <a
                     href="#services"
                     onClick={(e) => { e.preventDefault(); scrollTo('#services'); }}
-                    className="text-zinc-500 hover:text-amber-400 transition-colors text-sm flex items-center gap-2 group"
+                    className="text-zinc-500 hover:text-sky-400 transition-colors text-sm flex items-center gap-2 group"
                   >
-                    <span className="w-4 h-px bg-zinc-700 group-hover:bg-amber-400 transition-colors" />
+                    <span className="w-4 h-px bg-zinc-700 group-hover:bg-sky-400 transition-colors" />
                     {item}
                   </a>
                 </li>
@@ -158,9 +158,9 @@ export default function Footer() {
               {['DLA', 'DIFC', 'ICC', 'LCIA', 'ISO', 'UAEBA'].map((cert) => (
                 <div
                   key={cert}
-                  className="border border-zinc-800 p-3 text-center hover:border-amber-400/30 transition-colors"
+                  className="border border-zinc-800 p-3 text-center hover:border-sky-400/30 transition-colors"
                 >
-                  <span className="text-amber-400/80 font-playfair font-bold text-sm">{cert}</span>
+                  <span className="text-sky-400/80 font-playfair font-bold text-sm">{cert}</span>
                 </div>
               ))}
             </div>
