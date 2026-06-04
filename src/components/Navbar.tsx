@@ -4,10 +4,9 @@ import { Menu, X, Phone, Mail, Shield } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
+  { label: 'Profile', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Expertise', href: '#expertise' },
-  { label: 'Team', href: '#team' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -46,29 +45,29 @@ export default function Navbar() {
   return (
     <>
       {/* Top bar */}
-      <div className="hidden lg:block bg-zinc-950 border-b border-zinc-800/50 py-2 px-6">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-xs text-zinc-400">
+      <div className="hidden lg:block bg-white border-b border-slate-200 py-2 px-6">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-xs text-slate-600">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+97143000000"
-              className="flex items-center gap-2 hover:text-sky-400 transition-colors"
+              href="tel:+97142711305"
+              className="flex items-center gap-2 hover:text-sky-700 transition-colors"
               aria-label="Call us"
             >
               <Phone size={12} />
-              <span>+971 4 300 0000</span>
+              <span>04 - 271 1305</span>
             </a>
             <a
               href="mailto:info@hyderadvisory.com"
-              className="flex items-center gap-2 hover:text-sky-400 transition-colors"
+              className="flex items-center gap-2 hover:text-sky-700 transition-colors"
               aria-label="Email us"
             >
               <Mail size={12} />
               <span>info@hyderadvisory.com</span>
             </a>
           </div>
-          <div className="flex items-center gap-2 text-sky-400/70">
+          <div className="flex items-center gap-2 text-sky-700">
             <Shield size={12} />
-            <span>ISO 9001:2015 Certified | Licensed by Dubai Legal Affairs</span>
+            <span>Hyder Ali Advisory Corporate Services, Dubai U.A.E</span>
           </div>
         </div>
       </div>
@@ -77,7 +76,7 @@ export default function Navbar() {
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-zinc-800/50 shadow-2xl shadow-black/50 lg:top-0'
+            ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-lg shadow-slate-200/60 lg:top-0'
             : 'bg-transparent lg:top-[37px]'
         }`}
         initial={{ y: -100 }}
@@ -91,17 +90,17 @@ export default function Navbar() {
               href="#home"
               onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
               className="flex items-center gap-3 group"
-              aria-label="Hyder Ali Advisory - Home"
+              aria-label="Hyder Ali - Home"
             >
-              <div className="relative w-12 h-12 flex items-center justify-center border border-sky-500/50 rounded-full overflow-hidden group-hover:border-sky-400 transition-all duration-300">
-                <img src="/favicon.svg" alt="Hyder Ali Advisory logo" className="w-9 h-9 object-contain" />
+              <div className="relative w-12 h-12 flex items-center justify-center border border-sky-500/50 rounded-full overflow-hidden bg-white group-hover:border-sky-600 transition-all duration-300">
+                <img src="images/hyderali-logo.jpeg" alt="Hyder Ali Advisory logo" className="w-9 h-9 object-contain" />
               </div>
               <div className="hidden sm:block">
-                <p className="text-white font-playfair font-semibold text-base leading-tight tracking-wide">
-                  Hyder Ali Advisory
+                <p className="text-slate-950 font-playfair font-semibold text-base leading-tight tracking-wide">
+                  Hyder Ali
                 </p>
-                <p className="text-sky-400/70 text-[10px] tracking-[0.2em] uppercase font-inter">
-                  Corporate Services
+                <p className="text-sky-700 text-[10px] tracking-[0.2em] uppercase font-inter">
+                  Managing Director
                 </p>
               </div>
             </a>
@@ -115,14 +114,14 @@ export default function Navbar() {
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                   className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${
                     activeSection === link.href.replace('#', '')
-                      ? 'text-sky-400'
-                      : 'text-zinc-300 hover:text-white'
+                      ? 'text-sky-700'
+                      : 'text-slate-700 hover:text-slate-950'
                   }`}
                 >
                   {link.label}
                   {activeSection === link.href.replace('#', '') && (
                     <motion.div
-                      className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-px bg-sky-400"
+                      className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-px bg-sky-600"
                       layoutId="navUnderline"
                     />
                   )}
@@ -135,7 +134,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-                className="group relative px-6 py-2.5 text-sm font-semibold tracking-wide text-[#0a0a0f] bg-sky-400 hover:bg-sky-300 transition-all duration-300 overflow-hidden"
+                className="group relative px-6 py-2.5 text-sm font-semibold tracking-wide text-white bg-sky-700 hover:bg-sky-800 transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10">Free Consultation</span>
               </a>
@@ -144,7 +143,7 @@ export default function Navbar() {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-zinc-300 hover:text-white transition-colors"
+              className="lg:hidden p-2 text-slate-700 hover:text-slate-950 transition-colors"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >
@@ -157,7 +156,7 @@ export default function Navbar() {
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
-              className="lg:hidden bg-[#0d0d14]/98 backdrop-blur-xl border-t border-zinc-800/50"
+              className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-slate-200"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -171,8 +170,8 @@ export default function Navbar() {
                     onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                     className={`block py-3 px-4 text-base font-medium border-l-2 transition-all duration-200 ${
                       activeSection === link.href.replace('#', '')
-                        ? 'text-sky-400 border-sky-400 bg-sky-400/5'
-                        : 'text-zinc-300 border-transparent hover:text-white hover:border-zinc-600'
+                        ? 'text-sky-700 border-sky-600 bg-sky-50'
+                        : 'text-slate-700 border-transparent hover:text-slate-950 hover:border-slate-300'
                     }`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -185,7 +184,7 @@ export default function Navbar() {
                   <a
                     href="#contact"
                     onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }}
-                    className="block w-full text-center py-3 bg-sky-400 text-[#0a0a0f] font-semibold tracking-wide hover:bg-sky-300 transition-colors"
+                    className="block w-full text-center py-3 bg-sky-700 text-white font-semibold tracking-wide hover:bg-sky-800 transition-colors"
                   >
                     Free Consultation
                   </a>

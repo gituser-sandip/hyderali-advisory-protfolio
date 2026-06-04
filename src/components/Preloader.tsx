@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function Preloader() {
   return (
     <motion.div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#0a0a0f]"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-50"
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -35,7 +35,7 @@ export default function Preloader() {
         </motion.div>
 
         <motion.h1
-          className="text-2xl font-playfair text-white tracking-widest"
+          className="text-2xl font-playfair text-slate-950 tracking-widest"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -43,7 +43,7 @@ export default function Preloader() {
           HYDER ALI ADVISORY
         </motion.h1>
         <motion.p
-          className="text-sky-400/70 text-xs tracking-[0.3em] mt-2 uppercase"
+          className="text-sky-700 text-xs tracking-[0.3em] mt-2 uppercase"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
@@ -53,7 +53,7 @@ export default function Preloader() {
 
         {/* Loading bar */}
         <motion.div
-          className="mt-8 h-px w-48 bg-zinc-800 mx-auto overflow-hidden"
+          className="mt-8 h-px w-48 bg-slate-200 mx-auto overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}

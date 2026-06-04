@@ -6,13 +6,10 @@ import About from './components/About';
 import Services from './components/Services';
 import Stats from './components/Stats';
 import Expertise from './components/Expertise';
-import Testimonials from './components/Testimonials';
-import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Preloader from './components/Preloader';
-import SecurityBanner from './components/SecurityBanner';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +21,7 @@ export default function App() {
 
   return (
     <HelmetProvider>
-      <div className="font-inter bg-[#0a0a0f] text-white overflow-x-hidden">
+      <div className="font-inter bg-slate-50 text-slate-950 overflow-x-hidden">
         {loading && <Preloader />}
         <Navbar />
         <main>
@@ -33,9 +30,6 @@ export default function App() {
           <About />
           <Services />
           <Expertise />
-          <Testimonials />
-          <Team />
-          <SecurityBanner />
           <Contact />
         </main>
         <Footer />
